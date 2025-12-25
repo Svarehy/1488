@@ -15,12 +15,9 @@ jobs:
 
       - name: Set up Go
         uses: actions/setup-go@v5
-<<<<<<< HEAD
-=======
-        with: go version go1.25.5 darwin/arm64
->>>>>>> 1604a987557db66653603a6ac66906b4fe803954
         with:
-          go version go1.25.5 darwin/arm64
+          go-version: "1.25.1"
 
-      - name: Force Failure
-        run: (exit 0)
+      - name: Run tests
+        run: go test ./...
+
